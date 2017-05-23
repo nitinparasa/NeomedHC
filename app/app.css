@@ -14,7 +14,7 @@ body{
     position:relative;
     font-family: "Source Sans Pro",sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 40px;
     padding-right: 40px;
     color: darkblue;
@@ -344,6 +344,14 @@ p {
   text-decoration: none;
 }*/
 
+/* About us*/
+/*.content{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}*/
 
 /*footer*/
 footer{
