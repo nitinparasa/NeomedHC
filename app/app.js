@@ -4,7 +4,8 @@
 angular.module('NHCApp', [
   'ngRoute',
   'NHCApp.aboutus',
-  'NHCApp.home'
+  'NHCApp.home',
+  'NHCApp.products'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

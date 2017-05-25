@@ -99,17 +99,31 @@ nav.shrink .menulist>li>a:hover, nav.shrink .menulist>li>a:focus{
     background-repeat: no-repeat;
     background-size:cover;
 }
+.banner-content{
+  position:absolute;
+  top: 17.6667%;
+  left:5.6667%;
+}
+.banner-heading{
+  display:block;
+  font-size:50px;
+  font-family:'Roboto Condensed', sans-serif;
+  color:white;
+}
+.banner-text{
+  display:inline-block;
+  width:70%;
+  height:10%;
+  color:white;
+}
+.banner-text p{
+  display=inline-block;
+  font-size:20px;
+  font-family:'Source Sans Pro', sans-serif;
+}
 @media only screen and (max-width: 960px)
 .banner-heading {
     width: auto;
-}
-.banner-heading{
-    position:absolute;
-    top:150px;
-    left:120px;
-    font-size:50px;
-    font-family:"Roboto Condensed", sans-serif;
-    color:white;
 }
 @media only screen and (max-width: 960px)
 h3 {
@@ -428,8 +442,6 @@ p {
   font-size: 15px;
   line-height: 1em;
   color: #919090;
-  margin: 0 -10 0em 0;
-  display: block;
 }
 .p-image-holder img{
   max-height: 100%;
@@ -443,7 +455,14 @@ p {
   height: auto;
 }
 
-
+/****************** products ****************/
+.prod-content{
+  font-family: Source Sans Pro,sans-serif;
+}
+@media screen and (max-width: 960px)
+.banner-content p{
+  font-size: 15px;
+}
 /****************footer*******************/
 footer{
     position: relative;
