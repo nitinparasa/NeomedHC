@@ -466,7 +466,7 @@ p {
 /****************footer*******************/
 footer{
     position: relative;
-    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     height: auto;
     width:100%;
     bottom: 0;
@@ -487,14 +487,14 @@ footer{
     margin-bottom: 6px;
 }
 .footnav h3 {
-    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     font-weight: bold;
     color: white;
     margin-bottom: 20px;
 }
 .footnav ul li a{
-    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 12px;
     font-weight: bold;
     color: #dce1e2;
@@ -562,14 +562,14 @@ footer{
 
 }
 .copyright h4{
-    font-family:Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:'Source Sans Pro', sans-serif;
     font-size: 10px;
     font-weight:normal;
 }
 .footer-address{
     float:right;
     color: white;
-    font-family:Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight:normal;
 }

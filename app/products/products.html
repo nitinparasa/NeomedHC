@@ -8,23 +8,82 @@
     </div>
   </div>
 </div>
-<div class="prodpage-content" style="border:1px solid red;">
+<div class="prodpage-content" style="border:1px solid red;" ng-controller="ProdCtrl">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <h2 class="page-part-title heading-stripe">Product Portfolio</h2>
+        <h2 class="page-part-title heading-stripe">Products</h2>
       </div>
-      <div class="col-md-8">
-        <div class="container" style="border: 2px solid cyan;">
+      <div class="col-md-8" style="margin-top:1.6667%;">
+        <div class="container" style="max-width:100%;">
           <div class="row">
             <div class="col-md-6">
-              <h3>30+ Products</h3>
+              <h4>Search by brand Name</h4>
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search here.." aria-describedby="basic-btn1" />
+                  <span class="input-group-btn" id="basic-btn1">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                  </span>
+              </div>
             </div>
             <div class="col-md-6">
-              <h3>21 Dosage Forms</h3>
+              <h4>Search by active ingredient</h4>
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search here.." aria-describedby="basic-btn1" ng-model="inp2"/>
+                  <span class="input-group-btn" id="basic-btn1">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                  </span>
+              </div>
             </div>
           </div>
-
+          <div class="row">
+            <table class="table table-striped table-inverse">
+              <thead class="thead-inverse">
+                <tr>
+                <th> S No.</th>
+                <th> Brand Name</th>
+                <th> Active Ingredient</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="brand in products.brand">
+                <th scope="row">{{brand.sno}}</th>
+                <td>{{brand.name || uppercase}}</td>
+                <td>{{brand.active_ingredient}}</td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="table table-striped table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
         </div>
       </div>
     </div>

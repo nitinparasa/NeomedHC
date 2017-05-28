@@ -9,6 +9,13 @@ angular.module('NHCApp.products', ['ngRoute'])
   });
 }])
 
-.controller('ProdCtrl', [function() {
-
+.controller('ProdCtrl', ['$scope',function($scope) {
+    $scope.name="nitin";
+    $scope.products = {
+      brand: [
+        {sno:"1",name:"NEOPENEM S",active_ingredient:"Meropenem"},
+        {sno:"2",name:"Tazomed 4.5",active_ingredient:"Piperacillin and Tazobactum"},
+        {sno:"3",name:"Neopime",active_ingredient:"Cefipime"}
+      ]
+    };
 }]);
