@@ -6,6 +6,10 @@ angular.module('NHCApp.home', ['ngRoute'])
   $routeProvider.when('/', {
     templateUrl: 'home/home.html',
     controller: 'HomeCtrl'
+  }).
+  when('/products/:productType',{
+    templateUrl: 'products/prodthumb.html',
+    controller: 'ProdThumbCtrl'
   });
 }])
 

@@ -8,11 +8,11 @@
     </div>
   </div>
 </div>
-<div class="prodpage-content" style="border:1px solid red;" ng-controller="ProdCtrl">
   <div class="container-fluid">
+    <div class="prodpage-content" ng-controller="ProdCtrl">
     <div class="row">
       <div class="col-md-4">
-        <h2 class="page-part-title heading-stripe">Products</h2>
+        <h2 class="page-part-title heading-stripe" style="margin-left:7%;">Products</h2>
       </div>
       <div class="col-md-8" style="margin-top:1.6667%;">
         <div class="container" style="max-width:100%;">
@@ -20,7 +20,7 @@
             <div class="col-md-6">
               <h4>Search by brand Name</h4>
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search here.." aria-describedby="basic-btn1" />
+                  <input type="text" class="form-control" placeholder="Search here.." ng-model="search_brand"/>
                   <span class="input-group-btn" id="basic-btn1">
                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                   </span>
@@ -29,60 +29,34 @@
             <div class="col-md-6">
               <h4>Search by active ingredient</h4>
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search here.." aria-describedby="basic-btn1" ng-model="inp2"/>
+                  <input type="text" class="form-control" placeholder="Search here.." ng-model="search_ingredient"/>
                   <span class="input-group-btn" id="basic-btn1">
                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                   </span>
               </div>
             </div>
           </div>
-          <div class="row">
-            <table class="table table-striped table-inverse">
-              <thead class="thead-inverse">
+          <div class="row" style="padding:2%;margin-top:1%;">
+            <table class="table table-bordered table-hover">
+              <thead class="thead-inverse" style="background-color:black;color:white;">
                 <tr>
-                <th> S No.</th>
-                <th> Brand Name</th>
-                <th> Active Ingredient</th>
+                <th>#</th>
+                <th>Brand Name</th>
+                <th>Form</th>
+                <th>Active Ingredient(s)</th>
+                <th>Pack Detail</th>
                 </tr>
               </thead>
               <tbody>
               <tr ng-repeat="brand in products.brand">
                 <th scope="row">{{brand.sno}}</th>
-                <td>{{brand.name || uppercase}}</td>
+                <td>{{brand.name | uppercase}}</td>
+                <td>{{brand.form}}</td>
                 <td>{{brand.active_ingredient}}</td>
+                <td>{{brand.packof}}</td>
               </tr>
               </tbody>
             </table>
-            <table class="table table-striped table-inverse">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
           </div>
         </div>
       </div>

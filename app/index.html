@@ -17,12 +17,13 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">-->
   <link href="emoji.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="site_images/tab-icon.ico">
 </head>
 <body ng-app="NHCApp">
 <!-- Navigation -->
-<nav class="navbar navbar-fixed-top" role="navigation" id="navbar">
+<nav class="navbar navbar-fixed-top" role="navigation" id="navbar" ng-controller="MainCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
@@ -41,9 +42,9 @@
         <li class="dropdown">
           <a href="#" class="data-toggle menulist-has-children" data-toggle="dropdown">Company</a>
           <ul class="dropdown-menu">
-            <li><a href="#!/careers.html">Careers</a></li>
-            <li><a href="#!/news.html">News</a></li>
-            <li><a href="#!/contact.html">Contact Us</a></li>
+            <li><a href="#!/careers">Careers</a></li>
+            <li><a href="#!/news">News</a></li>
+            <li><a href="#!/contact">Contact Us</a></li>
           </ul>
         </li>
         <span class="glyphicon glyphicon-search overlay-search" onclick="openSearch()"></span>
@@ -54,37 +55,37 @@
 
 <div ng-view></div>
 
-<!-- Footer -->
-<footer>
+<!-- Footer
+<footer ng-controller="MainCtrl" style="border:1px solid red;">
   <div class="footnav" >
-    <div class="container">
+    <div class="container" style="border:1px solid yellow;">
       <div class="row">
         <div class="col-md-6 col-right emadd">
           <label> Want to stay in touch with us?</label>&nbsp;&nbsp;
           <input type="text" placeholder="Enter your e-mail address"/>
         </div>
         <div class="col-md-2 col-xs-12 col-sm-12">
-          <a href="#!/aboutus.html" style="text-decoration: none;"><h3 style="margin-left: 0px;">Company</h3></a>
+          <a href="#!/aboutus" style="text-decoration: none;"><h3 style="margin-left: 0px;">Company</h3></a>
           <ul>
-            <li> <a href="#">Our Brand</a></li>
-            <li> <a href="#">Our Team</a></li>
+            <li> <a href="#!/aboutus" data-target="#history">Our Brand</a></li>
+            <li> <a ng-click="goToTeam()" >Our Team</a></li>
           </ul>
         </div>
         <div class="col-md-2">
-          <a href="#!/requirements.html" style="text-decoration: none;"><h3 style="margin-left: 0px;">Careers</h3></a>
-          <a href="#!/glossary.html" style="text-decoration: none;"><h3 style="margin-left: 0px;">Glossary</h3></a>
+          <a href="#!/careers" style="text-decoration: none;"><h3 style="margin-left: 0px;text-transform:uppercase;">Careers</h3></a>
+          <a href="#!/contact" style="text-decoration: none;"><h3 style="margin-left: 0px;text-transform:uppercase;">Contact</h3></a>
         </div>
         <div class="col-md-2">
           <h3 style="margin-left: 0px;">Community</h3>
           <ul>
-            <li> <a href="#!/">Support</a></li>
-            <li> <a href="#!/">Disclaimer</a></li>
-            <li> <a href="#!/">Privacy Policy</a></li>
+            <li> <a href="#!/contact">Support</a></li>
+            <li> <a href="#!/disclaimer">Disclaimer</a></li>
+            <li> <a href="#!/privacypolicy">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="border:1px solid pink;">
       <div class="row" style="border-top:1px solid white;">
         <div class="col-md-6 social">
           <h3>Connect with Us</h3>
@@ -105,14 +106,74 @@
           </p>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="border:1px solid blue;">
         <div class="col-md-12 copyright">
           <h4>&copy; 2017 Neomed Health Care, All Rights Reserved</h4>
         </div>
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
+
+<!--new footer -->
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Neomed Health Care<span>(India) Pvt. Ltd.</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Company</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">Careers</a>
+					·
+					<a href="#">Privacy Policy</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Neomed Health Care &copy; 2017, All Rights Reserved</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>#1-10-71/2, 1st Floor, Street No. 11
+Ashok Nagar, Hyderabad</span> Telangana, INDIA</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>(91) 9440177062, 9440014604</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:neomed.healthcare@yahoo.co.in">neomed.healthcare@yahoo.co.in</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -128,5 +189,6 @@
   <script src="aboutus/aboutus.js"></script>
   <script src="home/home.js"></script>
   <script src="products/products.js"></script>
-</body>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+--></body>
 </html>

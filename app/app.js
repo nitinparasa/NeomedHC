@@ -6,9 +6,19 @@ angular.module('NHCApp', [
   'NHCApp.aboutus',
   'NHCApp.home',
   'NHCApp.products'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+])
+.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/'});
+  $routeProvider.
+  
+  otherwise({redirectTo: '/'});
+}])
+.controller('MainCtrl',['$scope', function($scope){
+$scope.gotToTeam = function(id) {
+ $location.path("/aboutus");
+ $timeout(function(){
+   $location.hash(id);
+   $anchorScroll();
+ }, delay);
+ };
 }]);
