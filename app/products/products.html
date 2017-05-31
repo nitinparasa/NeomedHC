@@ -20,7 +20,7 @@
             <div class="col-md-6">
               <h4>Search by brand Name</h4>
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search here.." ng-model="search_brand"/>
+                  <input type="text" class="form-control" placeholder="Search here.." ng-model="f.name"/>
                   <span class="input-group-btn" id="basic-btn1">
                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                   </span>
@@ -29,7 +29,7 @@
             <div class="col-md-6">
               <h4>Search by active ingredient</h4>
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search here.." ng-model="search_ingredient"/>
+                  <input type="text" class="form-control" placeholder="Search here.." ng-model="f.active_ingredient"/>
                   <span class="input-group-btn" id="basic-btn1">
                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                   </span>
@@ -48,7 +48,7 @@
                 </tr>
               </thead>
               <tbody>
-              <tr ng-repeat="brand in products.brand">
+              <tr ng-repeat="brand in products | filter:f">
                 <th scope="row">{{brand.sno}}</th>
                 <td>{{brand.name | uppercase}}</td>
                 <td>{{brand.form}}</td>

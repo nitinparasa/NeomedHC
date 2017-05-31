@@ -685,7 +685,8 @@ footer{
 /* Footer Right */
 
 .footer-distributed .footer-right{
-	width: 20%;
+  padding-left: 10px;
+  width: 20%;
 }
 
 .footer-distributed .footer-company-about{
