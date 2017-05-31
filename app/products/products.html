@@ -19,8 +19,9 @@
           <div class="row" style="font-family:'Roboto Condensed',sans-serif;">
             <div class="col-md-6">
               <h4>Search by brand name</h4>
+              <form name="frm1">
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search here.." ng-model="f.name"/>
+                  <input type="text" class="form-control" placeholder="Search here.." ng-model="f_name"/>
                   <span class="input-group-btn" id="basic-btn1">
                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                   </span>
@@ -29,11 +30,12 @@
             <div class="col-md-6">
               <h4>Search by active ingredient</h4>
               <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search here.." ng-model="f.active_ingredient"/>
+                  <input type="text" class="form-control" placeholder="Search here.." ng-model="f_active_ingredient"/>
                   <span class="input-group-btn" id="basic-btn1">
                     <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                   </span>
               </div>
+            </form>
             </div>
           </div>
           <div class="row" style="padding:2%;margin-top:1%;">
@@ -48,7 +50,7 @@
                 </tr>
               </thead>
               <tbody>
-              <tr ng-repeat="brand in products | filter:f | limitTo:limit">
+              <tr ng-repeat="brand in products | filter:f_name | filter:f_active_ingredient | limitTo:limit">
                 <th scope="row">{{brand.sno}}</th>
                 <td style="font-weight:bold;">{{brand.name | uppercase }}</td>
                 <td>{{brand.form}}</td>
@@ -57,8 +59,9 @@
               </tr>
               <tr>
                 <td colspan="5">
-                  <button class="btn btn-primary" ng-click="loadMore()" ng-hide="limit==40 || f!=NULL" style="width:100%;background-color:#004a82;" ng-show="f.name=='' || f.active_ingredient==''">Load More</button>
-                  <p ng-if="limit==40" style="text-align:center; font-family: 'Source Sans Pro', sans-serif; font-size:15px;background-color:#004a82;color:white;"> You've reached the end.</p>
+                  <button class="btn btn-primary mainbtn" ng-click="loadMore()" ng-hide="limit>=20 || f!=NULL || (limit>=20 && !f.$pristine)" style="width:100%;background-color:#004a82;" ng-show="f.name=='' || f.active_ingredient==''">View More</button>
+                  <button class="btn btn-primary morelessbtn" ng-click="loadMore()" ng-hide="limit == 10 || f!=NULL || limit==40" style="float:left;" ng-show="(limit>= 20 && limit<=30)">View More</button>
+                  <button class="btn btn-primary morelessbtn" ng-click="loadLess()" ng-hide="limit == 10 || f!=NULL" style="float:right;" ng-show="limit>=20" ng-class="{fullSize : limit>30}">View Less</button>
                 </td>
               </tr>
               </tbody>

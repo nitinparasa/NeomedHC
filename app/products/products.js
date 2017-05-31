@@ -52,6 +52,9 @@ angular.module('NHCApp.products', ['ngRoute'])
       $scope.loadMore = function(){
         $scope.limit = $scope.limit + 10;
       };
+      $scope.loadLess = function(){
+        $scope.limit = $scope.limit - 10;
+      };
 }])
 
 .controller('ProdThumbCtrl',['$scope','$routeParams',function($scope,$routeParams){

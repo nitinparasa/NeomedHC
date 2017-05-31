@@ -467,6 +467,17 @@ p {
   font-size: 15px;
 }
 
+.fullSize{
+  width:100%;
+}
+.morelessbtn{
+  width:50%;
+  background-color:#004a82;
+}
+.mainbtn:hover , .morelessbtn:hover{
+  font-size: 17px !important;
+}
+
 
 /****************footer******************
 footer{
