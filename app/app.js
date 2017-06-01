@@ -5,12 +5,13 @@ angular.module('NHCApp', [
   'ngRoute',
   'NHCApp.aboutus',
   'NHCApp.home',
-  'NHCApp.products'
+  'NHCApp.products',
+  'NHCApp.contact'
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
   $routeProvider.
-  
+
   otherwise({redirectTo: '/'});
 }])
 .controller('MainCtrl',['$scope', function($scope){
