@@ -25,7 +25,7 @@ angular.module('NHCApp.products', ['ngRoute'])
       {sno:"8",name:"C-DOXIM 50mg 30ml D/SYP",form:"Dry Syrup",active_ingredient:"Cefpodoxime 50mg Dry Suspension",packof:"1 Bottle"},
       {sno:"9",name:"C-DOXIM CV 200",form:"Tablet",active_ingredient:"Cefpodoxime 200 + Clavulanate 125mg ",packof:"10*10 Strips"},
       {sno:"10",name:"DAY FIT",form:"Tablet",active_ingredient:"Lycopene with Antioxidants, mineral, vitamin",packof:"10*10 Strips"},
-      {sno:"11",name:"EXCLAV 1.2 G",form:"Injection",active_ingredient:"Amoxicillin 1gm + Clavulanic acid 125mg",packof:"1 vial"},
+      {sno:"11",name:"EXCLAV 1.2 GM",form:"Injection",active_ingredient:"Amoxicillin 1gm + Clavulanic acid 125mg",packof:"1 vial"},
       {sno:"12",name:"FEROBATE",form:"Tablet",active_ingredient:"Ferrous Ascorbate 100mg + Folic acid 1.5mg ",packof:"10*10 Strips"},
       {sno:"13",name:"McBOL Forte Injs",form:"Injection",active_ingredient:"Methylcobalamin 1000mcg + Pyridoxine 100mg + Nicotinamide 100mg + D-Pantheno l50mg + Benzyl Alcohol i.p 2% Injs",packof:"1 vial"},
       {sno:"14",name:"McBOL FORTE",form:"Capsule",active_ingredient:"Mecobolamine 1500mcg + Folic acid 1.5mg + Alpha Lipoic acid 100mg + Thiamine 10mg + Vit B1,B6",packof:"10*10 Strips"},

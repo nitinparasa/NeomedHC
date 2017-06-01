@@ -470,12 +470,13 @@ p {
 .fullSize{
   width:100%;
 }
+.mainbtn{
+  width:100%;
+  background-color:#004a82 !important;
+}
 .morelessbtn{
   width:50%;
-  background-color:#004a82;
-}
-.mainbtn:hover , .morelessbtn:hover{
-  font-size: 17px !important;
+  background-color:#004a82 !important;
 }
 
 
