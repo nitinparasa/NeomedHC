@@ -48,16 +48,16 @@
 
 <div class="customerContact">
   <div class="container-fluid">
-    <div class="row" style="border:1px solid red;">
+    <div class="row">
       <div class="col-md-offset-1 col-md-10 col-md-offset-1">
         <p>In case of queries or complaints, you can either write to us or call the respective telephone numbers. We request you to be as specific as possible so that we can respond back with the most accurate answer.</p>
         <p class="content-subheading" style="color:white;text-align:center;font-size: 20px;font-weight:bold;">Please use the form below.</p>
       </div>
     </div>
 
-    <div class="row" style="border:1px solid red;">
-      <div class="col-md-8" style="border:1px solid yellow;">
-        <form name="contactForm">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+        <form name="contactForm" method="get" action="#!/requestSuccess">
           <div class="form-group">
             <label label="emailInput">Email Address: </label>
             <input type="email" id="emailInput" placeholder="Enter email here.." required/>
@@ -70,7 +70,7 @@
             <label label="messageInput">Message: </label>
             <textarea  id="messageInput" rows="3" placeholder="Enter your message here.."></textarea>
           </div>
-          <input type="submit"></input>
+          <input type="submit" value="SUBMIT"/>
         </form>
       </div>
     </div>

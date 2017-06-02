@@ -14,6 +14,9 @@ angular.module('NHCApp', [
 
   otherwise({redirectTo: '/'});
 }])
+.directive('scrollNav',['$window','$timeout', function($window,$timeout){
+
+}])
 .controller('MainCtrl',['$scope', function($scope){
 $scope.gotToTeam = function(id) {
  $location.path("/aboutus");

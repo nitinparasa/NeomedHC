@@ -6,7 +6,5 @@ $(window).scroll(function(){
    else{
        $('nav').removeClass('shrink');
        $('.navbar-brand img').attr('src', 'site_images/main_logo.png');
-
-
    }
 });
